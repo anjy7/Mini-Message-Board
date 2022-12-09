@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>New board message</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Add new board message</h1>
+      <form method="POST" action="/new">
+        <input type="text" name="author" placeholder="Author name" required />
+        <input type="text" name="message" placeholder="Your message" required />
+        <button type="submit">Add new message</button>
+      </form>
+      <br>
+      <a class="link" href="/">Go Back</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Mini mesasge board</title>
+</head>
+<body>
+    <div class="header">
+        <h1><%=title%></h1>
+        <a class="link" href="/new">Add new message</a>
+      </div>
+      <div class="messages">
+        <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
+        <div class="messages-box">
+          <h1><%= message.text %></h1>
+          <h3><%= message.user %></h3>
+          <p><%= message.added.toLocaleString() %></p>
+        </div>
+        <% }); %> <% } else { %>
+        <h1>There is no messages</h1>
+        <% } %>
+      </div>
+</body>
+</html>
